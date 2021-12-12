@@ -66,8 +66,8 @@ export default function App() {
         <View style={styles.box} key={id++}>
           
           <Text>{dayConverter(day.dt)}</Text>
-          <Text>Temperature: {day.temp.day}C</Text>
-          <Text>Feels like: {day.feels_like.day}</Text>
+          <Text>Temperature: {day.temp.day} C</Text>
+          <Text>Feels like: {day.feels_like.day} C</Text>
           <Text>Forecast: {day.weather[0].description}</Text>
           <Image source={{uri: `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}} style={{width: 50, height: 50}}  />
           
@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
   },
   box: {
     margin : 2,
+    backgroundColor: '#989898',
     borderStyle :"solid",
     borderWidth: 1
   }
